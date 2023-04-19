@@ -10,7 +10,7 @@ body {
 }
 
 .chessboard {
-  background-image: url('images/image1.png');
+  background-image: url('images/bgimage.png');
   background-color: #eda6ed;
   margin: auto;
   width: 500px;
