@@ -1,7 +1,9 @@
 body {
   font-family: Arial;
+  background-color: #4fdee8;
 }
 
 h1 {
-  background-color: #4fdee8;
+  background-color: #93b4cf;
+  margin: 30px
 }
