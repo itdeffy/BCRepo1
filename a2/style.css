@@ -1,23 +1,53 @@
+
 body {
   font-family: Arial;
-  background-color: #4fdee8;
 }
 
-h1 {
+.header {
   background-color: #93b4cf;
   text-align: center;
+  padding: 10px;
+
 }
 
 .chessboard {
-  background-image: url('images/image1.png');
+  background-color: #eda6ed;
   margin: auto;
-  width: 50%;
+  width: 425px;
+  height: 425px;
+  font-size: 0px;
+  padding-top: 25px;
+  padding-left: 25px;
+    
+}
+
+.row {
+  margin-left: 20
+  
 }
 
 .black {
   background-color: #000000;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
 }
 
 .white {
   background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+footer {
+  padding: 10px;
+  background-color: #93b4cf;
+  margin-top: 20px;
+}
+
+.validatorLink {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
