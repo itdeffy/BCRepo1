@@ -7,3 +7,17 @@ h1 {
   background-color: #93b4cf;
   text-align: center;
 }
+
+.chessboard {
+  background-image: url('images/image1.png');
+  margin: auto;
+  width: 50%;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.white {
+  background-color: #ffffff;
+}
