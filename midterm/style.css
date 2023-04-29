@@ -22,3 +22,25 @@ footer {
     margin: auto;
     text-align: center;
 }
+.validDiv {
+    padding: 10px;
+    background-color: #8eb8fa;
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    font-size: large;
+}
+.validGen {
+    margin: auto;
+    padding: 10px;
+    width: 60%;
+}
+.validHTML {
+    background-color: #fcf4c2;
+}
+.validCSS {
+    background-color: #f4c2fc;
+}
+.validIMG {
+    max-width: 80%;
+}
