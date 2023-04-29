@@ -1,0 +1,24 @@
+h1 {
+    background-color: aquamarine;
+}
+.subpageH1 {
+    text-align: center;
+}
+.subpageH2 {
+    text-align: center;
+}
+#topmenu {
+    
+}
+footer {
+    margin-top: 10px;
+    background-color: chartreuse;
+}
+.colorDiv {
+    display: inline-block;
+    width: 20%;
+    height: 400px;
+    font-size: 24px;
+    margin: auto;
+    text-align: center;
+}
