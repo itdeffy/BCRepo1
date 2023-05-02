@@ -31,9 +31,10 @@ footer {
     font-size: large;
 }
 .validGen {
+    display:table-cell;
     margin: auto;
     padding: 10px;
-    width: 60%;
+    width: 45%;
 }
 .validHTML {
     background-color: #fcf4c2;
