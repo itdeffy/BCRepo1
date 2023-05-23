@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>a04</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <form id="myform" onsubmit="validateForm();return false;">
+            <p>
+                <label for='FirstName'>First Name:</label>
+                <input type="text" id="FirstName" name="FirstName" />
+            </p>
+            <p>
+                <label for='LastName'>Last Name:</label>
+                <input type="text" id="LastName" name="LastName" />
+            </p>
+            <p>
+                <label for='EMail'>EMail:</label>
+                <input type="text" id="EMail" name="EMail" />
+            </p>
+            <p>
+                <label for='Username'>Username:</label>
+                <input type="text" id="Username" name="Username" />
+            </p>
+            <p>
+                <label for='Password'>Password:</label>
+                <input type="text" id="Password" name="Password" />
+            </p>
+            <p>
+                <label for='Phone'>Phone:</label>
+                <input type="text" id="Phone" name="Phone" />
+            </p>
+            <p>
+                <label for='Address'>Address:</label>
+                <textarea cols="20" rows="5" id="Address" name="Address"></textarea>
+            </p>
+            <p>
+                <label for='City'>City:</label>
+                <input type="text" id="City" name="City" />
+            </p>
+            <p>
+                <label for='Country'>Country:</label>
+                <select id="Country"  name="Country">
+                    <option value="000" selected="selected">[choose yours]</option>
+                    <option value="008">Albania</option>
+                    <option value="012">Algeria</option>
+                    <option value="016">American Samoa</option>
+                    <option value="020">Andorra</option>
+                    <option value="024">Angola</option>
+                    <option value="660">Anguilla</option>
+                    <option value="010">Antarctica</option>
+                    <option value="028">Antigua And Barbuda</option>
+                    <option value="032">Argentina</option>
+                    <option value="051">Armenia</option>
+                    <option value="533">Aruba</option>
+                    <option value="USA">United States</option>
+                </select>
+            </p>
+            <p>
+                <label for='State'>State (If living in USA):</label>
+                <select id="State"  name="State">
+                    <option value="000" selected="selected">[choose yours]</option>
+                    <option value="001">Alabama</option>
+                    <option value="002">Alaska</option>
+                    <option value="003">Arizona</option>
+                    <option value="004">Arkansas</option>
+                    <option value="005">California</option>
+                    <option value="006">Colorado</option>
+                    <option value="007">Connecticut</option>
+                    <option value="008">Delaware</option>
+                    <option value="009">Florida</option>
+                    <option value="010">Georgia</option>
+                    <option value="011">Hawaii</option>
+                    <option value="012">Idaho</option>
+                    <option value="013">Illinois</option>
+                    <option value="014">Indiana</option>
+                    <option value="015">Iowa</option>
+                    <option value="016">Kansas</option>
+                    <option value="017">Kentucky</option>
+                    <option value="018">Louisiana</option>
+                    <option value="019">Maine</option>
+                    <option value="020">Maryland</option>
+                    <option value="021">Massachusetts</option>
+                    <option value="022">Michigan</option>
+                    <option value="023">Minnesota</option>
+                    <option value="024">Mississippi</option>
+                    <option value="025">Missouri</option>
+                    <option value="026">Montana</option>
+                    <option value="027">Nebraska</option>
+                    <option value="028">Nevada</option>
+                    <option value="029">New Hampshire</option>
+                    <option value="030">New Jersey</option>
+                    <option value="031">New Mexico</option>
+                    <option value="032">New York</option>
+                    <option value="033">North Carolina</option>
+                    <option value="034">North Dakota</option>
+                    <option value="035">Ohio</option>
+                    <option value="036">Oklahoma</option>
+                    <option value="037">Oregon</option>
+                    <option value="038">Pennsylvania</option>
+                    <option value="039">Rhode Island</option>
+                    <option value="040">South Carolina</option>
+                    <option value="041">South Dakota</option>
+                    <option value="042">Tennessee</option>
+                    <option value="043">Texas</option>
+                    <option value="044">Utah</option>
+                    <option value="045">Vermont</option>
+                    <option value="046">Virginia</option>
+                    <option value="047">Washington</option>
+                    <option value="048">West Virginia</option>
+                    <option value="049">Wisconsin</option>
+                    <option value="050">Wyoming</option>
+                    <option value="051">Washington DC</option>
+                </select>
+            </p>
+            <p>
+                <label for='ZipCode'>Zip Code (If living in USA):</label>
+                <input type="text" id="ZipCode" name="ZipCode" />
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Submit">
+            </p>
+            </form>
+
+            <div id="err"></div>
+            <script src="main.js"></script>
+    </body>
+</html>
