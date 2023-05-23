@@ -5,22 +5,21 @@ function validateForm() {
     errorMsg = "";
     var validFirstName = validateText("FirstName", 20);
     var validLastName = validateText("LastName", 50);
-    var validEMail = false;
+    var validEMail = validateEmail();
     var validUser = validateText("Username", 12);
     var validPassword = validateText("Password", 7);
     var validPhone = validateNums("Phone", 20);
-    var validAddress = false;
-    var validCountry = false;
-    var validState = false;
-    var validZipCode = validateNums("ZipCode", 10);
-
+    var validAddress = validateText("Address", 200);
+    var validCountry = validateDropdowns("Country");
+    var validState = (validateDropdowns("Country") && document.getElementById("Country").value === "USA");
+    var validZipCode = (validateNums("ZipCode", 5) && document.getElementById("Country").value === "USA");
 
 
 
 
 
     showError(errorMsg);
-    if (validFirstName && validLastName && validEMail && validUser && validPhone && validAddress && validCountry) {
+    if (validFirstName && validLastName && validEMail && validUser && validPhone && validAddress && validCountry && validState && validZipCode) {
         alert("Form validated!");
     }
 }
@@ -31,7 +30,7 @@ function showError(errMsg) {
 
 function validateText(field, max) {
     var curField = document.getElementById(field).value;
-    if (curField == "null" || curFiled == "" | curField.length > max) {
+    if (curField === "null" || curField === "" | curField.length > max) {
         errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long! ";
         return false;
     }
@@ -40,9 +39,30 @@ function validateText(field, max) {
 
 function validateNums(field, max) {
     var curField = document.getElementById(field).value;
-    var nums = "1234567890-_";
-    if (curField == "null" || curFiled == "" | curField.length > max || !curField.match(nums)) {
+    var nums = "1234567890";
+    if (curField === "null" || curField === "" | curField.length > max || !curField.match(nums)) {
         errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long and can only contain numbers an _ or - characters!";
+        return false;
+    }
+    return true;
+}
+
+function validateDropdowns(field) {
+    var curField = document.getElementById(field).value;
+    if (curField != "000") {
+        errorMsg += "You need to pick a choice for the " + field + " field!";
+        return false;
+    }
+    return true;
+}
+
+function validateEmail() {
+    var curField = document.getElementById("EMail").value;
+    var atpos = curField.indexOf("@");
+    var dotpos = curField.lastIndexOf(".");
+    //makes sure the @ and . are in the email and there is text between them meaning they arent at the ends or beginnings of the email
+    if (atpos < 1 || dotpos < atpos+2 || dotpos+2>=curField.length) {
+        errorMsg += "The email is invald! Check to make sure you enetered it correctly!";
         return false;
     }
     return true;
