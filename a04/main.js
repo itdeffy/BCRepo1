@@ -40,7 +40,13 @@ function validateText(field, max) {
 function validateNums(field, max) {
     var curField = document.getElementById(field).value;
     var numbers=/^[0-9]+$/;
-    if (curField === "null" || curField === "" | curField.length > max || !curField.match(numbers)) {
+    if (field === "ZipCode" && document.getElementById("Country").value != "USA") {
+        if (curField != "null" || curField != "") {
+            errorMsg += "dont add a zip code since you didn't select USA as the country! ";
+            return false;
+        }
+        return true;
+    } else if (curField === "null" || curField === "" | curField.length > max || !curField.match(numbers)) {
         errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long and can only contain numbers an _ or - characters! ";
         return false;
     }
