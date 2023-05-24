@@ -11,8 +11,8 @@ function validateForm() {
     var validPhone = validateNums("Phone", 20);
     var validAddress = validateText("Address", 200);
     var validCountry = validateDropdowns("Country");
-    var validState = (validateDropdowns("Country") && document.getElementById("Country").value === "USA");
-    var validZipCode = (validateNums("ZipCode", 5) && document.getElementById("Country").value === "USA");
+    var validState = (validateDropdowns("State"));
+    var validZipCode = (validateNums("ZipCode", 5));
 
 
 
@@ -39,18 +39,30 @@ function validateText(field, max) {
 
 function validateNums(field, max) {
     var curField = document.getElementById(field).value;
-    var nums = "1234567890";
-    if (curField === "null" || curField === "" | curField.length > max || !curField.match(nums)) {
-        errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long and can only contain numbers an _ or - characters!";
+    var numbers=/^[0-9]+$/;
+    if (curField === "null" || curField === "" | curField.length > max || !curField.match(numbers)) {
+        errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long and can only contain numbers an _ or - characters! ";
         return false;
     }
     return true;
 }
 
+//checks the dropdowns and only asks for the state if USA was chosen for the country
 function validateDropdowns(field) {
     var curField = document.getElementById(field).value;
-    if (curField != "000") {
-        errorMsg += "You need to pick a choice for the " + field + " field!";
+    if (field === "State") {
+        if (document.getElementById("Country").value === "USA") {
+            if (curField === "000") {
+                errorMsg += "You need to pick a choice for the " + field + " field! ";
+                return false;
+            }
+        } else if (curField != "000") {
+            errorMsg += "Don't select a state since you didn't choose USA as the country";
+            return false;
+        }
+    }
+    else if (curField === "000") {
+        errorMsg += "You need to pick a choice for the " + field + " field! ";
         return false;
     }
     return true;
@@ -62,7 +74,7 @@ function validateEmail() {
     var dotpos = curField.lastIndexOf(".");
     //makes sure the @ and . are in the email and there is text between them meaning they arent at the ends or beginnings of the email
     if (atpos < 1 || dotpos < atpos+2 || dotpos+2>=curField.length) {
-        errorMsg += "The email is invald! Check to make sure you enetered it correctly!";
+        errorMsg += "The email is invald! Check to make sure you enetered it correctly! ";
         return false;
     }
     return true;
