@@ -43,8 +43,7 @@ function validateNums(field, max) {
     var numbers=/^[0-9]+$/;
     if (field === "ZipCode" && document.getElementById("Country").value != "USA") {
         if (curField.length != 0) {
-            errorMsg += curField + "."
-            //errorMsg += "dont add a zip code since you didn't select USA as the country! ";
+            errorMsg += "dont add a zip code since you didn't select USA as the country! ";
             return false;
         }
         return true;
