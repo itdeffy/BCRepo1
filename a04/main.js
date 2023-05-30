@@ -21,6 +21,7 @@ function validateForm() {
     showError(errorMsg);
     if (validFirstName && validLastName && validEMail && validUser && validPhone && validAddress && validCountry && validState && validZipCode) {
         alert("Form validated!");
+        window.location.replace("https://itdeffy.github.io/BCRepo1/a04/thanks.html")
     }
 }
 
