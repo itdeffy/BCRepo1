@@ -31,7 +31,7 @@ function showError(errMsg) {
 
 function validateText(field, max) {
     var curField = document.getElementById(field).value;
-    if (curField === "null" || curField === "" | curField.length > max) {
+    if (curField === null || curField === "" | curField.length > max) {
         errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long! ";
         return false;
     }
@@ -42,12 +42,13 @@ function validateNums(field, max) {
     var curField = document.getElementById(field).value;
     var numbers=/^[0-9]+$/;
     if (field === "ZipCode" && document.getElementById("Country").value != "USA") {
-        if (curField != "null" || curField != "") {
-            errorMsg += "dont add a zip code since you didn't select USA as the country! ";
+        if (curField.length != 0) {
+            errorMsg += curField + "."
+            //errorMsg += "dont add a zip code since you didn't select USA as the country! ";
             return false;
         }
         return true;
-    } else if (curField === "null" || curField === "" | curField.length > max || !curField.match(numbers)) {
+    } else if (curField === null || curField === "" | curField.length > max || !curField.match(numbers)) {
         errorMsg += "The " + field + " field can't be empty but must be less than " + (max+1) + " characters long and can only contain numbers an _ or - characters! ";
         return false;
     }
