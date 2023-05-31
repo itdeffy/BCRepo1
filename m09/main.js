@@ -9,7 +9,7 @@ document.getElementById("clear").addEventListener("click", function(event) {
     event.stopPropagation();
 });
 
-document.body.addEventListener("click", function(event) {
+document.addEventListener("click", function(event) {
     var dot = document.createElement("div");
     dot.className = "dot";
     dot.style.left = event.pageX - 4 + "px";
