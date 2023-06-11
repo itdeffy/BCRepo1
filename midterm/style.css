@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(126, 253, 255);
+    background-color:rgb(212, 212, 212);
 }
 
 .subpageH1 {
@@ -9,11 +9,22 @@ body {
 .subpageH2 {
     text-align: center;
 }
-#topmenu {
-    
+
+.homeDiv {
+    text-align: center;
 }
-footer {
-    margin-top: 10px;
+
+.courseDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.courseSubDiv {
+    font-size: 30px;
+    text-align: center;
+    width: 40%;
 }
 
 .artifactDiv {
@@ -59,10 +70,11 @@ footer {
 }
 
 .contentLink {
+    color:rgb(12, 0, 184);
     text-decoration: none;
     font-size: 32px;
 }
 
 .contentLink:hover {
-    color: rgb(0, 172, 172);
+    color: rgb(130, 178, 255);
 }
