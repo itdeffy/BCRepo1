@@ -86,3 +86,8 @@ body {
 .contentLink:hover {
     color: rgb(130, 178, 255);
 }
+
+.assignmentLinks {
+    text-decoration: none;
+    text-align: center;
+}
