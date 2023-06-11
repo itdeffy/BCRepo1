@@ -1,18 +1,16 @@
-h1 {
-    background-color: aquamarine;
-}
 .subpageH1 {
     text-align: center;
+    background-color: darkorange;
 }
 .subpageH2 {
     text-align: center;
+    background-color: darkkhaki;
 }
 #topmenu {
     
 }
 footer {
     margin-top: 10px;
-    background-color: chartreuse;
 }
 .colorDiv {
     display: inline-block;
@@ -44,4 +42,13 @@ footer {
 }
 .validIMG {
     max-width: 80%;
+}
+
+.contentLink {
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.contentLink:hover {
+    color: rgb(0, 172, 172);
 }
