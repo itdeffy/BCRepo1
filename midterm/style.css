@@ -47,7 +47,7 @@ body {
 }
 .validDiv {
     padding: 10px;
-    background-color: #8eb8fa;
+    /*background-color: #8eb8fa;*/
     width: 100%;
     min-height: 500px;
     text-align: center;
@@ -60,10 +60,18 @@ body {
     width: 45%;
 }
 .validHTML {
-    background-color: #fcf4c2;
+    border-style: ridge;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: rgb(161, 161, 161);
+    background-color: #fffbe0;
 }
 .validCSS {
-    background-color: #f4c2fc;
+    border-style: ridge;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: rgb(161, 161, 161);
+    background-color: #fffbe0;
 }
 .validIMG {
     max-width: 80%;
