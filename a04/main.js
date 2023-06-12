@@ -86,3 +86,4 @@ function validateEmail() {
     }
     return true;
 }
+

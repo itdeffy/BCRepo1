@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(212, 212, 212);
+    background-color:rgb(222, 222, 222);
 }
 
 .subpageH1 {
@@ -12,6 +12,18 @@ body {
 
 .homeDiv {
     text-align: center;
+}
+
+.topMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-spacing: 10px;
+}
+
+.homeLink {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .courseDiv {
@@ -60,18 +72,17 @@ body {
     width: 45%;
 }
 .validHTML {
+    background-color: #a4ff98;
+}
+
+.borderDiv {
     border-style: ridge;
     border-radius: 20px;
     border-width: 10px;
     border-color: rgb(161, 161, 161);
-    background-color: #fffbe0;
 }
 .validCSS {
-    border-style: ridge;
-    border-radius: 20px;
-    border-width: 10px;
-    border-color: rgb(161, 161, 161);
-    background-color: #fffbe0;
+    background-color: aquamarine;
 }
 .validIMG {
     max-width: 80%;
