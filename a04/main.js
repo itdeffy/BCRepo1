@@ -1,6 +1,8 @@
 var errors = document.getElementById("err");
 var errorMsg = "";
 
+getAuto
+
 function validateForm() {
     errorMsg = "";
     var validFirstName = validateText("FirstName", 20);
