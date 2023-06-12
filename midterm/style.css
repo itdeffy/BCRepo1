@@ -33,6 +33,12 @@ body {
     align-items: start;
 }
 
+.creativeSub {
+    width: 24%;
+    padding: 10px;
+    text-align: center;
+}
+
 .courseDiv {
     display: flex;
     flex-direction: row;
