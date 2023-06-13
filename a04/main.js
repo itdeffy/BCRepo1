@@ -22,7 +22,6 @@ function validateForm() {
 
     showError(errorMsg);
     if (validFirstName && validLastName && validEMail && validUser && validPassword && validPhone && validAddress && validCountry && validState && validZipCode) {
-        alert("Form validated!");
         window.location.replace("https://itdeffy.github.io/BCRepo1/a04/thanks.html")
     }
 }
@@ -62,7 +61,7 @@ function validateDropdowns(field) {
     if (field === "State") {
         if (document.getElementById("Country").value === "USA") {
             if (curField === "000") {
-                errorMsg += "You need to pick a choice for the " + field + " field! ";
+                errorMsg += "You need to pick a choice for the " + field + " field since you chose USA as the country! ";
                 return false;
             }
         } else if (curField != "000") {
