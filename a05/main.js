@@ -25,3 +25,5 @@ function nextImage() {
     }
     updateImage();
 }
+
+setInterval(nextImage, 3000);
