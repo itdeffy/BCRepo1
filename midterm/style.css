@@ -1,0 +1,47 @@
+h1 {
+    background-color: aquamarine;
+}
+.subpageH1 {
+    text-align: center;
+}
+.subpageH2 {
+    text-align: center;
+}
+#topmenu {
+    
+}
+footer {
+    margin-top: 10px;
+    background-color: chartreuse;
+}
+.colorDiv {
+    display: inline-block;
+    width: 20%;
+    height: 400px;
+    font-size: 24px;
+    margin: auto;
+    text-align: center;
+}
+.validDiv {
+    padding: 10px;
+    background-color: #8eb8fa;
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    font-size: large;
+}
+.validGen {
+    display:table-cell;
+    margin: auto;
+    padding: 10px;
+    width: 45%;
+}
+.validHTML {
+    background-color: #fcf4c2;
+}
+.validCSS {
+    background-color: #f4c2fc;
+}
+.validIMG {
+    max-width: 80%;
+}
